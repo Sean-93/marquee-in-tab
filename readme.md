@@ -6,7 +6,7 @@ Here’s a little demo showing how to make your page title scroll like a marquee
 
 - This requires VERY little JavaScript. Go ahead and copy the code below, and then put it in a &lt;script&gt; tag on your webpage.
 
-  <script>
+  <pre>
 const base = "Yay!  An animated tab!!!  This is great!!!";
 let text = base + "     ";
 
@@ -15,7 +15,7 @@ setInterval(() => {
   text = text.slice(1) + text[0];
   document.title = text;
 }, 300);
-  </script>
+  </pre>
 
 ## Live Demo
 
