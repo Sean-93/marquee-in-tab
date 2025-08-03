@@ -66,14 +66,13 @@ setInterval(() => {
     browser tab</p>
   <script>
     // FOR THE ANIMATED MARQUEE TAB
-    const base = "Yay!  An animated tab!!!  This is great!!!";
-    let text = base + "     ";
+const base = "Yay!  An animated tab!!!  This is great!!!";
+let text = base + "     ";
 
-    setInterval(() => {
-
-      text = text.slice(1) + text[0];
-      document.title = text;
-    }, 300);
+setInterval(() => {
+  text = text.slice(1) + text[0];
+  document.title = text;
+}, 300);
 
 
     // COPYING THE CODE TO CLIPBOARD

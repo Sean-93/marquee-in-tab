@@ -23,4 +23,4 @@ setInterval(() => {
 
 -This site was styled using WaterCSS https://watercss.kognise.dev/
 
--This repo was inspired by https://syntheticfruits.neocities.org/ because I noticed it in their browser tab on their site
+-This repo was inspired by https://syntheticfruits.neocities.org/ because their site has a similar animation in their browser tab
