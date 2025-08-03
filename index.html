@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- GENERIC METADATA -->
+    <meta name="author" content="Sean Rooney" />
+    <meta name="description" content="Here’s a little demo showing how to make your page title scroll like a marquee in the browser tab with just a bit of JavaScript." />
+    <meta name="keywords" content="fun html, fun JavaScript, fun coding, fun web development, easy web development, simple web development, web animation, browser tab marquee, marquee in browser tab, tab marquee" />
+    <!-- CANONICAL URL -->
+    <link rel="canonical" href="https://marquee-in-tab.neocities.org/" />
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow" />
+  <!-- WATERCSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <title>Browser Tab Marquee Using JavaScript</title>
+  <style>
+    pre {
+      font-family: system-ui, sans-serif;
+      border-radius: 1vw;
+      background-color: aliceblue;
+      padding: 2rem;
+    }
+
+    h1,
+    h2 {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Animate Your Site's Browser Tab With JavaScript!</h1>
+  <p>For fun, and to add some often-unused motion to your site.</p>
+  <hr>
+  <p>Does <b>NOT</b> affect SEO. Google and other browsers will only index the initial title tag. Anything else you do
+    to it with JS afterwards is not displayed in search.</p>
+  <br />
+  <h2>How to do it?</h2>
+  <p>This requires VERY little JavaScript. Go ahead and copy the code below using the "Copy to Clipboard" button, and
+    then put it in a &lt;script&gt; tag on your webpage.</p>
+  <pre id="code">
+const base = "Yay!  An animated tab!!!  This is great!!!";
+let text = base + "     ";
+
+setInterval(() => {
+
+  text = text.slice(1) + text[0];
+  document.title = text;
+}, 300);
+</pre>
+
+  <button id="copyBtn">Copy to Clipboard</button>
+  <hr>
+  <br />
+  <h2>Repo/Source:</h2>
+  <p>You can find the repo of this project here: <a href="/https://github.com/Sean-93/marquee-in-tab" target="_blank"
+      rel="noreferrer noopener">https://github.com/Sean-93/marquee-in-tab</a></p>
+
+  <h2>Misc.</h2>
+  <p>This site was styled using WaterCSS <a href="https://watercss.kognise.dev/" target="_blank"
+      rel="noopener">https://watercss.kognise.dev/</a></p>
+  <p>This repo was inspired by <a href="https://syntheticfruits.neocities.org/" target="_blank"
+      rel="noopener">https://syntheticfruits.neocities.org/</a> because their site has a similar animation in their
+    browser tab</p>
+  <script>
+    // FOR THE ANIMATED MARQUEE TAB
+    const base = "Yay!  An animated tab!!!  This is great!!!";
+    let text = base + "     ";
+
+    setInterval(() => {
+
+      text = text.slice(1) + text[0];
+      document.title = text;
+    }, 300);
+
+
+    // COPYING THE CODE TO CLIPBOARD
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      const code = document.getElementById('code').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        alert('Code copied to clipboard!');
+      });
+    });
+  </script>
+  <!-- JSON-LD SCHEMA-->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://marquee-in-tab.neocities.org/#website",
+    "name": "Browser Tab Marquee Using JavaScript",
+    "url": "https://marquee-in-tab.neocities.org/",
+    "description": "Here’s a little demo showing how to make your page title scroll like a marquee in the browser tab with just a bit of JavaScript.",
+    "keywords": "fun html, fun JavaScript, fun coding, fun web development, easy web development, simple web development, web animation, browser tab marquee, marquee in browser tab, tab marquee",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://marquee-in-tab.neocities.org/"
+    },
+    "sameAs": ["https://github.com/Sean-93/asciimoon"],
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://marquee-in-tab.neocities.org/#website",
+      "name": "Browser Tab Marquee Using JavaScriptn",
+      "url": "https://marquee-in-tab.neocities.org/"
+    }
+  }
+</script>
+</body>
+
+</html>
